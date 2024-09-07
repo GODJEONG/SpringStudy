@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.good.juno.dao.ProductIDao">
+  
+  <!-- 테스트 상품 넣기 -->
+  <insert id="insertProduct" parameterType="com.good.juno.dto.ProductDto">
+    INSERT INTO junoProduct (
+      productType, productId, name, price, productDes, productKeyword, productToWho, 
+      productSmell, productIngr, productImg1, productImg2, productDetailImg
+    ) VALUES (
+      #{productType}, #{productId}, #{name}, #{price}, #{productDes}, #{productKeyword}, 
+      #{productToWho}, #{productSmell}, #{productIngr}, #{productImg1}, 
+      #{productImg2}, #{productDetailImg}
+    )
+  </insert>
+  
+  <!-- 상품리스트 -->
+  <select id="productList1" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 1
+  </select>
+  <select id="productList2" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 2
+  </select>
+  <select id="productList3" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 3
+  </select>
+  <select id="productList4" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 4
+  </select>
+  <select id="productList5" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 5
+  </select>
+  <select id="productList6" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 6
+  </select>
+  <select id="productList7" resultType="com.good.juno.dto.ProductDto">
+	 select productType, productId, name, price, productImg1, productImg2 from junoProduct where productType = 7
+  </select>
+  
+  <!-- 상품상세 -->
+  <select id="productDetail" resultType="com.good.juno.dto.ProductDto">
+  	select * from junoProduct where productType = #{param1} and productId = #{param2}
+  </select>
+  
+  <!-- 주문번호찾기 -->
+  <select id="getOrderNum" resultType="Integer">
+  	select count(*) from orders
+  </select>
+  
+  <!-- 결제테이블인서트 -->
+  <insert id="insertOrder">
+  	insert into orders (orderid, userid) values (#{param1}, #{param2})
+  </insert>
+  
+  <!-- 결제상세테이블인서트 -->
+  <insert id="insertOrderDetail">
+  	insert into orderdetails (orderid, producttype, productid, quantity) values (#{param1}, #{param2}, #{param3}, #{param4})
+  </insert>
+ 
+ 	
+    <select id="getAllOrders" resultType="com.good.juno.dto.OrderInfoDto">
+       SELECT o.date AS orderDate,
+              o.orderid AS orderId,
+              o.userid AS userId,
+              o.pay AS payStatus,
+              SUM(od.quantity * p.price) AS totalAmount
+       FROM orders o
+       JOIN orderdetails od ON o.orderid = od.orderid
+       JOIN junoProduct p ON od.producttype = p.productType AND od.productid = p.productId
+       WHERE o.userid = #{param}
+       GROUP BY o.orderid
+       ORDER BY o.date DESC;
+   </select>
+
+	<select id="getOrderDetails" parameterType="int" resultType="com.good.juno.dto.OrderDetailProductDto">
+	    SELECT od.orderid, od.producttype, od.productid, od.quantity,
+	           p.name, p.price, p.productImg1
+	    FROM orderdetails od
+	    JOIN junoProduct p ON od.producttype = p.productType AND od.productid = p.productId
+	    WHERE od.orderid = #{param}
+	</select>
+
+</mapper>

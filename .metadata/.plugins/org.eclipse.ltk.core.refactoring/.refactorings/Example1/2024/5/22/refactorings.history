@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Example2/src/main/java/kr.soft.study2&apos;&#x0D;&#x0A;- Original project: &apos;Example1&apos;&#x0D;&#x0A;- Destination element: &apos;Example2/src/main/java/kr.soft.study2&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     kr.soft.study.MainClass.java&#x0D;&#x0A;     kr.soft.study.Calculation.java" description="Copy compilation units" destination="=Example2/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.soft.study2" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.soft.study{MainClass.java" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.soft.study{Calculation.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716943342138" units="2" version="1.0"/>
+</session>

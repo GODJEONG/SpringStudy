@@ -1,0 +1,93 @@
+@charset "EUC-KR";
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+/* 제목 스타일 */
+h1 {
+	color: #333;
+	text-align: center;
+}
+
+/* 테이블 스타일 */
+table {
+	width: 80%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+/* 테이블 셀 스타일 */
+td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+/* 링크 스타일 */
+a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* 이미지 스타일 */
+img {
+	max-width: 100px;
+	height: auto;
+}
+
+/* 버튼 스타일 */
+button {
+	padding: 5px 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.right-align {
+	float: right; /* 오른쪽 정렬 */
+	margin-right: 20px; /* 여백 조정 */
+}
+
+.center-align {
+	text-align: center;
+}
+
+.shopping-list-title {
+	font-size: 30px; /* 원하는 글자 크기로 조정 */
+}
+
+a.button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+a.button:hover {
+	background-color: #0056b3;
+}

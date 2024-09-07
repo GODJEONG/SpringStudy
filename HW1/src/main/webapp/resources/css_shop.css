@@ -1,0 +1,126 @@
+@charset "EUC-KR";
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	color: #333;
+	text-align: center;
+}
+
+table {
+	width: 80%;
+	margin: 20px auto;
+	border-collapse: collapse;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	max-width: 100px;
+	height: auto;
+}
+
+input[type="text"] {
+	width: 30px;
+	text-align: center;
+}
+
+button {
+	padding: 5px 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button {
+	padding: 8px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+.right-align {
+	float: right; /* 오른쪽 정렬 */
+	margin-right: 20px; /* 여백 조정 */
+}
+
+.center-align {
+	text-align: center;
+}
+
+.shopping-list-title {
+	font-size: 30px;
+}
+
+/*//////////////////////////////////////////////// */
+a.button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+a.button:hover {
+	background-color: #0056b3;
+}
+
+.container {
+	display: inline-block; /* 인라인 요소처럼 배치 */
+	margin: 0 20px; /* 가운데 정렬 */
+	text-align: center; /* 내부 요소 가운데 정렬 */
+	width: auto; /* 원하는 너비 설정 */
+	padding: 10px; /* 내부 여백 설정 */
+	text-align: center;
+}
+
+.cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; /* 화면 전체 높이 */
+    margin: 0;
+}
+
+.bb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}

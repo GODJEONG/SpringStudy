@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="HW3"/>
+<aop-project name="Family_anno_to_xml"/>
+<aop-project name="Join"/>
+<aop-project name="Example12"/>
+<aop-project name="Example16"/>
+<aop-project name="Example4"/>
+<aop-project name="Example8"/>
+<aop-project name="JunoHair"/>
+<aop-project name="Ex1_0614"/>
+<aop-project name="Example7_Annotation"/>
+<aop-project name="ServiceTest"/>
+<aop-project name="Example_From_amo_To_xml"/>
+<aop-project name="Example13"/>
+<aop-project name="Example17"/>
+<aop-project name="Example20"/>
+<aop-project name="Example3"/>
+<aop-project name="Example7"/>
+<aop-project name="36.mybatise"/>
+<aop-project name="upbit_test"/>
+<aop-project name="HW1"/>
+<aop-project name="validate"/>
+<aop-project name="spring_21_1_ex1_srpingex"/>
+<aop-project name="0_BBS_Exam"/>
+<aop-project name="Juno"/>
+<aop-project name="Example10"/>
+<aop-project name="Example14"/>
+<aop-project name="Example18"/>
+<aop-project name="Example2"/>
+<aop-project name="Example6"/>
+<aop-project name="student"/>
+<aop-project name="Example_From_xml_To_anno"/>
+<aop-project name="Family_xml_to_anno"/>
+<aop-project name="Example5_Annotation"/>
+<aop-project name="Example1"/>
+<aop-project name="Example11"/>
+<aop-project name="Example15"/>
+<aop-project name="Example19"/>
+<aop-project name="Example5"/>
+<aop-project name="Example9"/>
+<aop-project name="Join2"/>
+</aop-reference-model>

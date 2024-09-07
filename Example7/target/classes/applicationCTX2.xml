@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="student3" class="kr.soft.study.Student"> <property name="name" 
+		value="홍길자" /> <property name="hobbys"> <list> <value>수영</value> <value>요리</value> 
+		</list> </property> </bean> -->
+
+	<bean id="student3" class="kr.soft.study.Student" p:name="홍길자">
+		<property name="hobbys">
+			<list>
+				<value>수영</value>
+				<value>요리</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<!-- <bean id="family" class="kr.soft.study.Family"> <constructor-arg value="홍아빠"/> 
+		<constructor-arg value="홍엄마"/> <constructor-arg value="홍누나"/> <constructor-arg 
+		value="홍오빠"/> </bean> -->
+	<bean id="family" class="kr.soft.study.Family" c:papaName="아빠"
+		c:mamiName="엄마" p:sisterName="누나">
+		<property name="brotherName" value="오빠"></property>
+	</bean>
+
+
+</beans>

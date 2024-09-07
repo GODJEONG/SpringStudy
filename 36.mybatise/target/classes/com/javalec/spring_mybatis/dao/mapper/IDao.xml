@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 매핑할 xml파일 알려주기 -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.javalec.spring_mybatis.dao.IDao">
+
+	<select id="listDao" resultType="com.javalec.spring_mybatis.dto.ContentDto">
+		SELECT * FROM BOARD3 ORDER BY MID DESC
+	</select>	
+	<insert id="writeD ao">
+		INSERT INTO BOARD3 (MID, MWRITER, MCONTENT) VALUES (0, #{param1}, #{param2})
+	</insert>	
+	<delete id="deleteDao">
+		DELETE FROM BOARD3 WHERE MID = #{param1}
+	</delete>	
+	
+</mapper>
+  
+  	
+  	
+<!--   	위의 select 구문과 동일 기능
+	@Override
+	public ArrayList<ContentDto> listDao() {
+		String query = "select * from board3 order by mId desc";
+		ArrayList<ContentDto> dtos = (ArrayList<ContentDto>) template.query(query, new BeanPropertyRowMapper<ContentDto>(ContentDto.class));
+		return dtos;
+	} -->
+	
+	

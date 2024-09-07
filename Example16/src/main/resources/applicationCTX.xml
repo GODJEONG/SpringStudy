@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+
+	<bean id="LogAop" class="kr.soft.study.LogAop" />
+
+<!-- 	<aop:config>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="within(kr.soft.study.*)"
+				id="publicM" />
+			<aop:around pointcut-ref="publicM" method="loggerAop" />
+		</aop:aspect> 
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="within(kr.soft.study.*)"
+				id="publicM" />
+			<aop:before pointcut-ref="publicM" method="beforeAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="within(kr.soft.study.*)"
+				id="publicM" />
+			<aop:after-returning pointcut-ref="publicM"
+				method="afterReturningAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="within(kr.soft.study.*)"
+				id="publicM" />
+			<aop:after-throwing pointcut-ref="publicM"
+				method="afterThrowingAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="within(kr.soft.study.*)"
+				id="publicM" />
+			<aop:after pointcut-ref="publicM"
+				method="afterAdvice" />
+		</aop:aspect>
+
+
+	</aop:config> -->
+
+
+
+	<aop:config>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="bean(student)"
+				id="publicM" />
+			<aop:around pointcut-ref="publicM" method="loggerAop" /> 
+		</aop:aspect> 
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="bean(student)"
+				id="publicM" />
+			<aop:before pointcut-ref="publicM" method="beforeAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="bean(student)"
+				id="publicM" />
+			<aop:after-returning pointcut-ref="publicM"
+				method="afterReturningAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="bean(student)"
+				id="publicM" />
+			<aop:after-throwing pointcut-ref="publicM"
+				method="afterThrowingAdvice" />
+		</aop:aspect>
+
+		<aop:aspect id="Logger" ref="LogAop">
+			<aop:pointcut expression="bean(student)"
+				id="publicM" />
+			<aop:after pointcut-ref="publicM"
+				method="afterAdvice" />
+		</aop:aspect>
+
+
+	</aop:config>
+
+
+
+
+	<bean id="student" class="kr.soft.study.Student">
+		<property name="name" value="신정" />
+		<property name="age" value="32" />
+		<property name="gradeNum" value="3" />
+		<property name="classNum" value="2" />
+	</bean>
+
+	<bean id="worker" class="kr.soft.study.Worker">
+		<property name="name" value="신신" />
+		<property name="age" value="32" />
+		<property name="job" value="개발자" />
+	</bean>
+
+</beans>
+

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.good.juno.dao.AdminDao">
+
+	<insert id="memberInsert">
+		insert into member VALUES (#{param1}, #{param2},
+		#{param3},
+		#{param4},#{param5},#{param6},#{param7});
+	</insert>
+
+	<select id="membercheck" resultType="int">
+		SELECT count(id) FROM member
+		WHERE id = #{param1} AND pw = #{param2}
+	</select>
+
+
+	<select id="getInfo" resultType="com.good.juno.dto.LoginDto">
+		select * from member where id =
+		#{param1}
+	</select>
+
+	<select id="getDesignerInfo"
+		resultType="com.good.juno.dto.DesignerDto">
+		select * from designer where designerid =
+		#{param1}
+	</select>
+
+
+
+	<select id="memberall" resultType="com.good.juno.dto.LoginDto">
+		SELECT * FROM member
+	</select>
+
+	<select id="admin" resultType="String">
+		SELECT admin FROM member where id
+		= #{param1}
+	</select>
+
+	<delete id="member_del">
+		delete from member where id= #{param1} ;
+	</delete>
+
+	<delete id="designer_del">
+		delete from designer where designerId= #{param1} ;
+	</delete>
+
+	<insert id="branch_register">
+		INSERT INTO branch (branchName, address, openingTime,
+		parking, contact,branchPath) VALUES (#{param1}, #{param2}, #{param3},
+		#{param4},#{param5},#{param6});
+	</insert>
+
+	<insert id="designer_register">
+		INSERT INTO designer (designerId, designerName,
+		introduce, designerPath, branchId) VALUES (#{param1}, #{param2},
+		#{param3},
+		#{param4},#{param5});
+	</insert>
+
+	<select id="branchlist" resultType="String">
+		SELECT branchName FROM branch
+	</select>
+
+	<select id="branchid" resultType="int">
+		SELECT branchId FROM branch
+		where branchName = #{param1}
+	</select>
+
+	<select id="branchname" resultType="String">
+		SELECT branchName FROM branch
+		where branchId = #{param1}
+	</select>
+
+	<select id="desingerall"
+		resultType="com.good.juno.dto.DesignerDto">
+		select a.*, branchName
+		from designer a, branch b
+		where
+		a.branchId = b.branchId
+	</select>
+
+	<select id="getAllOrders"
+		resultType="com.good.juno.dto.OrderInfoDto">
+		SELECT o.date AS orderDate,
+		o.orderid AS orderId,
+		o.userid AS
+		userId,
+		o.pay AS payStatus,
+		SUM(od.quantity * p.price) AS totalAmount
+		FROM orders o
+		JOIN orderdetails od ON o.orderid = od.orderid
+		JOIN
+		junoProduct p ON od.producttype = p.productType AND od.productid =
+		p.productId
+		GROUP BY o.orderid
+		ORDER BY o.date DESC;
+	</select>
+
+	<select id="getOrderDetails" parameterType="int"
+		resultType="com.good.juno.dto.OrderDetailProductDto">
+		SELECT od.orderid, od.producttype, od.productid,
+		od.quantity,
+		p.name, p.price, p.productImg1
+		FROM orderdetails od
+		JOIN
+		junoProduct p ON od.producttype = p.productType AND od.productid =
+		p.productId
+		WHERE od.orderid = #{param}
+	</select>
+
+	<select id="getAllQna" resultType="com.good.juno.dto.QnaDto">
+		select * from qna
+	</select>
+
+	<select id="Qnainfo" resultType="com.good.juno.dto.QnaDto">
+		select * from qna where qnaid
+		=
+		#{param1}
+	</select>
+
+
+	<select id="workday" resultType="String">
+		select workDay from designerWork
+		where designerId = #{param1}
+	</select>
+
+	<update id="qna_reply">
+		update qna set answer = 1 where qnaid = #{param1}
+	</update>
+
+	<update id="designer_modify_member">
+		UPDATE member
+		SET pw = #{param2}, email = #{param3}, intro = #{param4}
+		WHERE id = #{param1}
+	</update>
+	<update id="designer_modify_designer">
+		update designer set introduce = #{param2} where
+		designerId = #{param1}
+	</update>
+
+	<delete id="delete_workday">
+		DELETE FROM designerWork WHERE designerId = #{designerId}
+	</delete>
+
+	<update id="designer_modify_work">
+		INSERT INTO designerWork (designerId, workDay) VALUES (#{param1}, #{param2})
+	</update>
+	
+	<select id="getAllReservations" resultType="com.good.juno.dto.ReservationDetailDto">
+		SELECT 
+		    r.reservationId,
+		    r.reservationDate,
+		    r.reservationTime,
+		    r.reservationStatus,
+		    m.name AS memberName,
+		    b.branchName,
+		    d.designerName
+		FROM reservation r
+		JOIN member m ON r.userId = m.id
+		JOIN branch b ON r.branchId = b.branchId
+		JOIN designer d ON r.designerId = d.designerId
+	</select>
+	
+	<select id="getAllReservationsForDesigner" resultType="com.good.juno.dto.ReservationDetailDto">
+		SELECT 
+		    r.reservationId,
+		    r.reservationDate,
+		    r.reservationTime,
+		    r.reservationStatus,
+		    m.name AS memberName,
+		    b.branchName,
+		    d.designerName
+		FROM reservation r
+		JOIN member m ON r.userId = m.id
+		JOIN branch b ON r.branchId = b.branchId
+		JOIN designer d ON r.designerId = d.designerId
+		WHERE d.designerId = #{param}
+	</select>
+	
+	<select id="getAllReservationsForUser" resultType="com.good.juno.dto.ReservationDetailDto">
+		SELECT 
+		    r.reservationId,
+		    r.reservationDate,
+		    r.reservationTime,
+		    r.reservationStatus,
+		    m.name AS memberName,
+		    b.branchName,
+		    d.designerName
+		FROM reservation r
+		JOIN member m ON r.userId = m.id
+		JOIN branch b ON r.branchId = b.branchId
+		JOIN designer d ON r.designerId = d.designerId
+		WHERE r.userId = #{param}
+	</select>
+
+</mapper>

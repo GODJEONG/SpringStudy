@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config />
+	<bean class="kr.soft.study.ApplicationConfig" />
+
+	<bean id="student1" class="kr.soft.study.Student" p:name="홍길동">
+		<property name="hobbys">
+			<list>
+				<value>수영</value>
+				<value>요리</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="studentInfo1" class="kr.soft.study.StudentInfo">
+		<constructor-arg name="student" ref="student1" />
+	</bean>
+
+
+
+</beans>

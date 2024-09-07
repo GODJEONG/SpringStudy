@@ -1,0 +1,40 @@
+
+@font-face {
+	font-family: 'Spoqa Han Sans';
+	font-weight: 700;
+	src: local('Spoqa Han Sans Bold'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansBold.woff2') format('woff2'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansBold.woff') format('woff'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansBold.ttf') format('truetype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Spoqa Han Sans';
+	font-weight: 400;
+	src: local('Spoqa Han Sans Regular'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansRegular.woff2') format('woff2'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansRegular.woff') format('woff'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansRegular.ttf') format('truetype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Spoqa Han Sans';
+	font-weight: 300;
+	src: local('Spoqa Han Sans Light'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansLight.woff2') format('woff2'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansLight.woff') format('woff'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansLight.ttf') format('truetype');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Spoqa Han Sans';
+	font-weight: 100;
+	src: local('Spoqa Han Sans Thin'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansThin.woff2') format('woff2'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansThin.woff') format('woff'),
+	url('https://vendor-cdn.imweb.me/fonts/SpoqaHanSansThin.ttf') format('truetype');
+	font-display: swap;
+}

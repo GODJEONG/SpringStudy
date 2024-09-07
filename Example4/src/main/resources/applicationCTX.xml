@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 빈은 id로 받고, property는 이름으로 설정한다 -->
+
+
+	<bean id="bmiCalculator" class="kr.soft.study.BMICalculator">
+		<property name="normal" value="18.5" />
+		<property name="overWeight" value="23" />
+		<property name="obesity" value="25" />
+	</bean>
+
+
+	<bean id="myinfo" class="kr.soft.study.MyInfo">
+		<property name="bmiCalculator">
+			<ref bean="bmiCalculator" />
+		</property>
+		<property name="hobbys">
+			<list>
+				<value>크로스핏</value>
+				<value>달리기</value>
+			</list>
+		</property>
+		<property name="name" value="신정" />
+		<property name="height" value="174" />
+		<property name="weight" value="73" />
+
+	</bean>
+
+
+</beans>

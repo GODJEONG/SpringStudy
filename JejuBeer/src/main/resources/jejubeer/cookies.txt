@@ -1,0 +1,15 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	FB_EXTERNAL_ID	u202007025efdb1973aab32024062649c67e8ca066d
+.vimeo.com	TRUE	/	FALSE	1999999999	__cf_bm	B0FwLGrkD22942uWQhXIBFN_uetm1cuomMnviJgi0Ag-1719410399-1.0.1.1-HNuMDkaGsWXfa6.vYfqQPvmijFthvwBbmuklNGv5u1ndUZtG0rGe27v9CETM.QEN8QJcUe4ZcHpWE6UzgFJkIw
+.vimeo.com	TRUE	/	FALSE	1999999999	_cfuvid	EUtbaMKV.LZbIJPdoVcw7xRmxR4IQxqgeFhnImeYREM-1719410399125-0.0.1.1-604800000
+player.vimeo.com	TRUE	/	FALSE	1999999999	SameSite	None
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	ilc_io	deleted
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	IMWEBVSSID	lk2f8k1e89o5tsfdsm0mbre1bmpdkrvs6pcvptgq60ano87vaplhuf06trlf2ji8b0k1kekrlk2arf3pvnrval1dh3mqjo58pcbbat2
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	SameSite	None
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	ISDID	deleted
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	ilc	deleted
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	ilc_expert	deleted
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	ial	deleted
+jejubeer.co.kr	TRUE	/	FALSE	1999999999	al	KR
+

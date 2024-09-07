@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Juno/src/main/webapp/WEB-INF/views/reservation/scheduleCopy.jsp&apos;" deleteContents="false" description="Delete resource &apos;Juno/src/main/webapp/WEB-INF/views/reservation/scheduleCopy.jsp&apos;" element1="/Juno/src/main/webapp/WEB-INF/views/reservation/scheduleCopy.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1720097752385"/>
+</session>

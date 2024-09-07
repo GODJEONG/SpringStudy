@@ -1,0 +1,84 @@
+@charset "EUC-KR";
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+}
+
+.login-container {
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.login-container h2 {
+	text-align: center;
+	color: #333;
+}
+
+.login-form {
+	margin-top: 20px;
+}
+
+.login-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-form input[type="password"]:focus {
+    outline: none; /* 포커스 시 파란 테두리 제거 */
+}
+
+.login-form input[type="text"] {
+	width: calc(100% - 20px);
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.login-form input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+a.login-form-submit {
+	width: 280px;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	text-align: center; /* 텍스트를 가운데 정렬합니다. */
+	text-decoration: none; /* 기본 링크 효과를 제거합니다. */
+	display: inline-block; /* 인라인 요소를 블록 요소로 변환하여 너비와 높이를 지정할 수 있습니다. */
+}
+
+.login-form input[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+.login-form h4 {
+	margin-top: 20px;
+	text-align: center;
+	color: #777;
+}
+
+

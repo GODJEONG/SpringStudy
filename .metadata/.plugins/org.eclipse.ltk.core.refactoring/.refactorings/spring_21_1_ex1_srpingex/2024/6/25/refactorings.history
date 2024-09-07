@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;views&apos;&#x0D;&#x0A;- Original project: &apos;spring_21_1_ex1_srpingex&apos;&#x0D;&#x0A;- Destination element: &apos;views&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     reply_view.jsp&#x0D;&#x0A;     write_view.jsp&#x0D;&#x0A;     content_view.jsp" description="Copy files" element1="src/main/webapp/WEB-INF/views/reply_view.jsp" element2="src/main/webapp/WEB-INF/views/write_view.jsp" element3="src/main/webapp/WEB-INF/views/content_view.jsp" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1718690808363" target="/0_BBS_Exam/src/main/webapp/WEB-INF/views" units="0" version="1.0"/>
+</session>
